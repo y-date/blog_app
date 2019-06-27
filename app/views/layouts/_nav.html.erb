@@ -1,0 +1,16 @@
+<nav>
+  <div class="nav-wrapper">
+    <%= link_to "Blog App", root_path, class: "brand-logo" %>
+    <ul id="nav-menus" class="nav-menus">
+    <% if user_signed_in?%>
+      <li class="nav-menu"><%= link_to "新規投稿", new_blog_path, class: "nav-menu__btn" %></li>
+      <li class="nav-menu"><%= link_to "マイページ", user_path(current_user.id), class: "nav-menu__btn" %></li>
+      <li class="nav-menu"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-menu__btn" %></li>
+    <% else %>
+      <li class="nav-menu"><%= link_to "ログイン", new_user_session_path, class: "nav-menu__btn" %></li>
+      <li class="nav-menu"><%= link_to "新規登録", new_user_registration_path, class: "nav-menu__btn" %></li>
+    <% end %>
+      <li class="nav-menu"><%= link_to "検索", root_path, class: "nav-menu__btn" %></li>
+    </ul>
+  </div>
+</nav>

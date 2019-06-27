@@ -1,0 +1,23 @@
+<div class="blog-card">
+  <%= link_to "", blog_path(blog.id), class: "blog-card__link" %>
+  <div class="blog-card__image">
+    <%= image_tag(blog.image)%>
+  </div>
+  <div class="blog-card__contents">
+    <div class="blog-card__contents__title">
+      <span><%= blog.title %></span>
+    </div>
+    <div class="blog-card__contents__overview">
+      <p><%= blog.overview %></p>
+    </div>
+    <div class="blog-card__contents__info">
+      <%= render partial: "favorites/favorites", locals: { blog: blog } %>
+      <div class="blog-card__contents__info__name">
+        <%= link_to "@#{blog.user.name}", user_path(blog.user_id) %>
+      </div>
+      <div class="blog-card__contents__info__date">
+        <%= blog.created_at.to_s(:date) %>
+      </div> 
+    </div>
+  </div>
+</div>

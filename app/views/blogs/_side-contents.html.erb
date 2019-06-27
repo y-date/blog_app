@@ -1,0 +1,20 @@
+<div class="side-contents">
+  <div class="ranking">人気記事ランキング
+    <div class="ranking__tab">
+      <button class="ranking__tab__btn select">週間</button>
+      <button class="ranking__tab__btn">月間</button>
+      <button class="ranking__tab__btn">年間</button>
+    </div>
+    <div class="ranking__wrapper">
+      <div class="ranking__blogs ranking__blogs--week show">
+        <%= render partial: "ranking", collection: @ranked_blogs, as: "blog" %>
+      </div>
+      <div class="ranking__blogs ranking__blogs--month">
+        <%= render partial: "ranking", collection: @test_blogs, as: "blog" %>
+      </div>
+      <div class="ranking__blogs ranking__blogs--year">
+        <%= render partial: "ranking", collection: @ranked_blogs, as: "blog" %>
+      </div>
+    <div>
+  </div>
+</div>

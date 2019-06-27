@@ -1,0 +1,21 @@
+<div class="blog-form">
+  <h1>ブログ投稿</h1>
+  <%= form_for @blog do |f| %>
+    <div class="blog-form__field blog-form__field__title">
+      <%= f.text_field :title, placeholder: "タイトルを入力してください", class: "blog-form__field__input" %>
+    </div>
+    <div class="blog-form__field blog-form__field__overview">
+      <%= f.text_field :overview, placeholder: "サブタイトルや記事の概要を入力してください", class: "blog-form__field__input" %>
+    </div>
+    <div class="blog-form__field blog-form__field__text">
+      <%= f.text_area :text, cols: "80", rows: "20", placeholder: "記事の内容を自由にお書き下さい", class: "blog-form__field__input" %>
+    </div>
+    <div class="blog-form__field blog-form__field__image">
+      <%= f.text_field :image, type: "text", placeholder: "写真のURLを入力してください", class: "blog-form__field__input" %>
+    </div>
+    <div class="blog-form__field__footer">
+      <%= f.submit "保存する", class: "blog-form__field__btn" %>
+      <%= f.submit "投稿する", class: "blog-form__field__btn" %>
+    </div>
+  <% end %>
+</div>

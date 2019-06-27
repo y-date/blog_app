@@ -1,0 +1,17 @@
+<div class="blogs">
+  <% @user.blogs.each do |blog| %>
+    <div class="mypage-blogs">
+      <%= render partial: "blogs/blog", locals: { blog: blog } %>
+      <% if @user.id == current_user.id %>
+        <div class="mypage-blogs__footer">
+          <div class="mypage-blogs__footer__btn mypage-blogs__footer__edit">
+            <%= link_to "編集", edit_blog_path(blog) %>
+          </div>
+          <div class="mypage-blogs__footer__btn mypage-blogs__footer__delete">
+            <%= link_to "削除", blog_path(blog), method: :delete %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

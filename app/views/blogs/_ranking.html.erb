@@ -1,0 +1,9 @@
+<div class="ranking__blog">
+  <%= link_to "", blog_path(blog.id), class: "ranking__blog__link" %>
+  <div class="ranking__blog__left">
+    <%= image_tag(blog.image)%>
+  </div>
+  <div class="ranking__blog__right">
+    <%= blog.title %>
+  </div>
+</div>

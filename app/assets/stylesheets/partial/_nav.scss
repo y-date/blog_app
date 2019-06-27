@@ -1,0 +1,25 @@
+.nav-wrapper {
+  width: 100%;
+  height: 80px;
+  background-color: $color-300;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  color: white;
+  font-size: 32px;
+  margin: 10px;
+}
+
+.nav-menus {
+  list-style: none;
+  display: flex;
+  .nav-menu {
+    margin: 10px;
+    &__btn {
+      color: white;
+    }
+  }
+}

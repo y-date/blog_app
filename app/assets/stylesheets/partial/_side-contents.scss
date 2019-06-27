@@ -1,0 +1,65 @@
+.side-contents {
+  width: 350px;
+  height: 680px;
+  margin: 10px;
+}
+
+.ranking {
+  border: double 4px $color-300;
+  padding: 5px;
+  font-size: 16px;
+  text-align: center;
+  background-color: $color-1000;
+  &__tab {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px; 
+    &__btn {
+      background-color: $color-500;
+      width: 100%;
+      padding: 3px 0;
+      margin: 0 1px;
+    }
+    .select {
+      background-color: $color-800;
+    }
+  }
+
+  &__blogs {
+    display: none;
+  }
+  
+  &__blog {
+    height: 120px;
+    padding: 10px;
+    border-bottom: 1px solid $color-900;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &__link {
+      height: 80%;
+      width: 90%;
+      position: absolute;
+      z-index: 2;
+    }
+    &__left {
+      width: 80px;
+      height: 80px;
+      img {
+        height:100%;
+        width: 100%;
+      }
+    }
+    &__right {
+      width: 130px;
+      font-weight: bold;
+      text-decoration: underline solid $color-300;
+      text-align: left;
+      margin-left: 5px;
+    }
+  }
+
+  .show {
+    display: block;
+}
+}

@@ -1,0 +1,24 @@
+<div class="blog-wrapper">
+  <div class="blog-container">
+    <div class="blog">
+      <h1 class="blog__title">
+        <%= @blog.title %>
+      </h1>
+      <div class="blog__info">
+        <%= render partial: "favorites/favorites", locals: { blog: @blog } %>
+        <div class="blog__info__author">
+          <%= link_to "@#{@blog.user.name}", user_path(@blog.user_id) %>
+        </div>
+        <div class="blog__info__date">
+          <%= "#{@blog.created_at.to_s(:datetime)} 投稿" %>
+        </div>
+      </div>
+      <h2 class="blog__overview">
+        <%= @blog.overview %>  
+      </h2>
+      <div class="blog__text">
+        <%= @blog.text %>
+      </div>
+    </div>
+  </div>
+</div>

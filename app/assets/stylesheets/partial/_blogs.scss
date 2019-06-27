@@ -1,0 +1,13 @@
+.contents {
+  display: flex;
+
+}
+
+.blogs {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
