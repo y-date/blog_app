@@ -6,7 +6,7 @@ class User < ApplicationRecord
   
   has_many :blogs
   has_many :favorites
-  has_many :favorite_blogs, through: :favorites, source: :tweet
+  has_many :favorite_blogs, through: :favorites, source: :blog
 
   def like(blog)
     favorites.find_or_create_by(blog_id: blog.id)

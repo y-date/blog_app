@@ -5,9 +5,9 @@
         <%= fas_icon "star", class: "blog-card__contents__info__favorite__icon" %>
       <% end %>
     <% else %>
-      <%= link_to blog_favorite_path(blog.id), method: :create do %>
+      <%= link_to blog_favorite_path(blog.id), method: :post do %>
         <%= far_icon "star", class: "blog-card__contents__info__favorite__icon" %>
-      <% end %>    
+      <% end %>
     <% end %>
   <% else %>
     <%= far_icon "star", class: "blog-card__contents__info__favorite__icon" %>
